@@ -1,0 +1,66 @@
+$main-color:#2a4cb2;
+
+div{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0px;
+}
+
+.list-style {
+    li {
+        width: 350px;
+        border: 1px solid #eeeeee;
+        list-style-type: none;
+        padding: 15px;
+    }
+    .active {
+        background-color: $main-color;
+        color:white;
+    }
+}
+
+//////////////////////////////////////////////////////
+
+%box{
+    border-radius: 5px;
+    width: 600px;
+    padding: 15px;
+    margin: 20px;
+}
+
+.green-box{
+    @extend %box;
+    background-color: rgba(96, 190, 109, 0.842);
+}
+
+.blue-box{
+    @extend %box;
+    background-color: rgb(151, 189, 240);
+}
+
+.yellow-box{
+    @extend %box;
+    background-color: rgb(228, 228, 164);
+}
+
+//////////////////////////////////////////////////////
+
+@mixin colunm($width){
+    border: 1px solid #eee;
+    float: left;
+    padding: 15px;
+    width: $width;
+}
+
+.row .col-6{
+    @include colunm(50%);
+}
+
+.row .col-4{
+    @include colunm(33.33%);
+}
+
+
+//////////////////////////////////////////////////////

@@ -1,0 +1,63 @@
+.btn { 
+    border: none;
+    background-color: rgb(113, 220, 247);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+.btn:hover{
+    animation-name: 흔들;
+    animation-duration: 0.8s;
+}
+
+@keyframes 흔들{
+    0%{
+        transform: rotate(0deg);
+    }
+    15%{
+        transform: rotate(-10deg);
+    }
+    30%{
+        transform: rotate(10deg);
+    }
+    45%{
+        transform: rotate(-10deg);
+    }
+    60%{
+        transform: rotate(10deg);    
+    }
+    75%{
+        transform: rotate(0deg);    
+    }
+}
+
+.rotate{
+    will-change: transform;
+    font-size: 100px;
+    text-align: center;
+}
+
+.rotate:hover{
+    animation-name: 회전;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes 회전{
+    0%{
+        transform: rotate(0deg);
+        transform-origin: 50% 60%;
+    }
+    20%{
+        transform: rotate(-20deg) scale(1);
+        transform-origin: 50% 60%;
+    }
+    100%{
+        transform: rotate(45deg) scale(1.2);
+        transform-origin: 50% 60%;
+    }
+}

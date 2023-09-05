@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'nanum';
+    src: url();
+}
+
+body{
+    margin: 0px;
+}
+
+div{
+    box-sizing: border-box;
+}
+
+.cart-background{
+    width: 100%;
+    background-color: #c2d3de;
+    padding: 30px;
+}
+
+.cartTable{
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    border-collapse: collapse;
+}
+
+
+.cartTable td,.cartTable th{
+    padding: 15px;
+    border-bottom: 1px solid #c2d3de;
+}
+
+.cartTable th:nth-child(2){
+    width: 400px;
+}
+
+.btn{
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: coral;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: chocolate;
+}
+
+.btn:focus{
+    background-color: gray;
+}
+
+.btn:active{
+    background-color: brown;
+}
+
+.custom-link{
+    text-decoration: none;
+}
+
+.custom-link:link{
+    color:violet;
+}
+
+.custom-link:visited{
+    color:black
+}

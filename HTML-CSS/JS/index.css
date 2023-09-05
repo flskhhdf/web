@@ -1,0 +1,47 @@
+.navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+}
+
+.navbar-brand {
+  font-size: 30px;
+}
+
+.alert-box {
+  background-color: skyblue;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+  display: block;
+}
+
+.list-group {
+  overflow: hidden;
+  height: 0px;
+  transition: all 1s;
+}
+
+.show-list {
+  height: 200px;
+}
+
+.show {
+  display: block;
+}
+
+.slide-container {
+  width: 300vw;
+}
+
+.slide-box {
+  width: 100vw;
+  float: left;
+}
+.slide-box img {
+  width: 100%;
+}
+
+.animation {
+  transition: all 1s;
+}/*# sourceMappingURL=index.css.map */

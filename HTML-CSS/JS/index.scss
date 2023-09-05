@@ -1,0 +1,51 @@
+// UI 만드는 법칙
+// 1. html/css로 미리 디자인 (필요하면 숨김)
+// 2. 필요할 때 보여달라고 코드짬(자바스크립트로)
+.navbar{
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+}
+
+.navbar-brand{
+    font-size: 30px;
+}
+
+.alert-box{
+    background-color: skyblue;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+    display: block;
+}
+
+.list-group{
+    overflow: hidden;
+    height: 0px;
+    transition: all 1s;
+}
+
+.show-list{
+    height: 200px;
+}
+
+.show{
+    display: block;
+}
+
+.slide-container{
+    width: 300vw;
+    
+}
+
+.slide-box{
+    img{
+        width: 100%;
+    }
+    width: 100vw;
+    float: left;
+}
+
+.animation{
+    transition: all 1s;
+}

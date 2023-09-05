@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="webContest.css" rel='stylesheet'>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class = "modal-bg">    
+                <div class = "modal-content">
+                    <div class = "modal-name">
+                        <p style="font-weight: bold; font-size: 20px">성함</p>
+                        <input type="text">
+                    </div>
+                    <div class = "modal-add">
+                        <p style="font-weight: bold; font-size: 20px">연락처</p>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <button class = "btn btn-done" style="width: 100px;">입력완료</button> 
+                        <button class = "btn btn-close" >닫기</button>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="nav-bar">
+                <ul>
+                    <li style="font-size: 20px;">집 꾸미기</li>
+                    <li>Home</li>
+                    <li>스토어</li>
+                    <li>시공견적</li>
+                </ul>
+            </nav>
+
+            <div class="main-bg">
+                <div class="main-input">
+                    <input type="text" placeholder="검색어입력" id="input">
+                </div>
+
+                <div class="main-content" id = "item-box"> </div>
+
+                <div class="main-cart">
+                    <div>장바구니</div>
+                    <div class="main-content cart-bucket" draggable="false">
+                        <p>여기로 드래그</p>
+                    </div>
+                </div>
+
+                <div class = "main-price">
+                    <div style="font-weight: bold; font-size: 20px;">최종가격</div>
+                    <div class ="total-price">합계 : <span id = "totalPrice">0</span></div>
+                    <button class = "btn" id="btn-buy" style="width: 100px;">구매하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src='webContest.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+div {
+  margin: 0px;
+}
+
+.container {
+  width: 1280px;
+  margin: auto;
+}
+
+.main-content {
+  width: 80%;
+  margin: auto;
+}
+
+.main-box {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #F3F3F3;
+  border-radius: 10px;
+}/*# sourceMappingURL=angel.css.map */

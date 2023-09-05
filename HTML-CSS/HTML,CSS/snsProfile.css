@@ -1,0 +1,112 @@
+div{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+}
+
+p{
+    margin-bottom: 3px !important; 
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.container-bg{
+    background-color: #dae1ec;
+    width: 100%;
+}
+
+.header{
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #bec5cf;
+    width: 80%;
+    margin: auto;
+}
+
+.header-privacy{
+    width: 100%;
+    display: flex;
+    border-radius: 15px;
+}
+
+.img{
+    width: 15%;
+}
+
+.header-info{
+    padding-left: 20px;
+    padding-top : 30px;
+    width: 50%;
+}
+
+.button{
+    background-color: #6fbaf8 ;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    width: 90px;
+    height: 30px;
+    display: block;
+    margin: 0px;
+}
+
+.header-location{
+    display: inline-block;
+    color: #6fbaf8;
+}
+
+i{
+    color: #6fbaf8;
+}
+
+.header-info div{
+    display: flex;
+}
+
+.header-info h5{
+    display: block;
+    width: 50%;
+}
+
+.header-info p{
+    width: 50%;
+}
+
+.main-border{
+    padding-top : 20px;
+    display: flex;
+}
+
+.main-border div{
+    width: 10%;
+    border-bottom: 2px solid #bec5cf;
+    text-align: center;
+    padding: 5px;
+    color: #6fbaf8;
+}
+
+.main-content{
+    display: flex;
+}
+
+.content-box{
+    padding: 20px;
+    width: 20%;
+}
+
+.content-box > div:nth-child(1){
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.box-info{
+    width: 100%;
+    display: flex;
+    padding: 20px;
+}

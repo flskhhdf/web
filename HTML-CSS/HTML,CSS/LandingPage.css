@@ -1,0 +1,171 @@
+body{
+    margin: 0px;
+}
+
+div{
+    box-sizing: border-box;
+}
+
+h3{
+    margin: 0px;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.main-bg{
+    width: 80%;
+    background: linear-gradient(rgb(73,152,220), rgb(78,98,193));
+    margin: auto;
+}
+
+.main-content{
+    padding: 50px;
+    color: white;
+    font-size: 20px;
+    width: 50%;
+    float:left;
+}
+
+button{
+    background-color: rgb(68, 68, 69);;
+    border: none;
+    text-align: center;
+    color: white;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.main-img{
+    width: 50%;
+    float: left;
+    align-content:end
+}
+
+.main-img img{
+    display: block;
+    width: 60%;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+.main-w100_content{
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    padding: 60px;
+}
+
+.main-underContent{
+    text-align: center;
+    color: white;
+}
+
+.main-icon{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-icon div{
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.main-icon i {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 100px;
+    color: rgb(78,98,193);
+    box-sizing: border-box;
+    padding-top: 25px;
+}
+
+.under-section{
+    width: 80%;
+    background-color: white;
+    margin: auto;
+    padding: 30px;
+}
+
+.under-content{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.under-imgBox{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.img-content{
+    width: 50%;
+    position: relative;
+}
+
+.under-imgBox img{
+    width: 100%;
+    display: block;
+}
+
+.img-content div{
+    position: absolute;
+    padding: 30px;
+    top: 10%;
+    color: white;
+}
+
+.border{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border : 0px solid white;
+    transition: all 0.5s;
+}
+
+.border:hover{
+    border: 25px solid white;
+}
+
+.footer-box{
+    width: 80%;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+}
+
+.footer-icon i{
+    background-color: rgb(78, 97, 192);
+    color: white;
+    border-radius: 100px;
+    width: 70px;
+    height: 70px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width:768px) {
+    .main-content{
+        width: 100%;
+    }
+    
+    .main-img{
+        width: 100%;
+    }
+
+    .main-img img {
+        margin: auto;
+    }
+}

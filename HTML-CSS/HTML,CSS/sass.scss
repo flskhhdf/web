@@ -1,0 +1,75 @@
+// 1. 어려운 단어 기억해야 할 땐 변수문법 쓴다
+$main-color:#2a4cb2;
+$sub-color:#eeeeee;
+$default-size:16px;
+
+// 2. nesting 문법
+.main-bg{
+    width: 100px;
+    h4{
+        font-size: $default-size;
+    }
+    div{
+        font-size: $default-size;
+    }
+}
+
+// 3. @extend 문법
+%btn{ // %는 임시 클래스명
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+}
+.btn-green{
+    @extend %btn;
+    color: green;
+}
+
+.btn-red{
+    @extend %btn;
+    color: red;
+}
+.btn-blue{
+    @extend %btn;
+    color: blue;
+}
+// 중복된 스타일이 많으면 클래스로 묶어두고 @extend로 복사
+// 임시 클래스 특징 : 단독으로 컴파일되지 않음
+
+// 4. @mixin
+
+@mixin font-style($size, $wid, $width){
+    font-size: $size;
+    #{$width}: $wid; 
+}
+
+h2{
+    @include font-style(30px, 100px, width)
+}
+
+h3{
+    @include font-style(20px, 200px, width)
+}
+
+h4{
+    @include font-style(10px , 130px , width)
+}
+
+// 긴 코드를 짧은 단어로 축양할 때 씀
+// 가변적인 것을 원할땐 mixin
+///////////////////////////////////////
+
+// 맨날 쓰는 기본 파일은 @use '파일명' ex body maring 0; div box-sizing border box 등등
+// 이렇게 사용되는 파일명은 _파일명.scss 로 css 파일이 생성되지 않게 할 수 있음
+// 다른 파일의 $변수를 쓰려면 파일명.$변수
+//
+div{
+    box-sizing: border-box;
+    background-color: $main-color;
+    font-size: ($default-size - 4px);
+}
+
+body{
+    margin: 0px;
+    font-size: ($default-size + 4px);
+}

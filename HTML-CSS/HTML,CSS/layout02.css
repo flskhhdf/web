@@ -1,0 +1,359 @@
+div, input, textarea{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    font-family:NanumSquareRound;
+    transform: rotate(0.03deg);
+}
+
+input[type=file]::-webkit-file-upload-button{
+    background-color: skyblue;
+    border: none;
+    padding:15px;
+    border-radius: 10px;
+    
+}
+
+input[type=file]::-webkit-file-upload-button{
+    background-color: skyblue;
+    border: none;
+    padding:15px;
+    border-radius: 10px;
+}
+
+input::-webkit-input-placeholder{
+    color: red;
+}
+
+input[type=range]{
+    appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    background : red;
+    width: 50px;
+    height: 50px;
+}
+
+.mainBackground{
+    width: 100%;
+    height: 500px;
+    background-image: url("img/shoes.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(100%);
+    padding: 1px;
+    position: relative;
+}
+
+.mainTitle{
+    font-size: 40px;
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+    /*네모 박스가 두개가 위족 테두리가 겹쳐짐
+      h4에 마진을 주어도 위에 있는 div에도 적용됨
+      해결하기 위해서는 테두리가 붙지 않게 해야한다
+      margin collapse 현상
+      */
+}
+
+.subTitle{
+    font-size: 20px;
+    color: white;
+    font-family:NanumSquareRound;
+    text-align: center;
+}
+
+
+.buyBtn{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 3px black;
+    font-size: 20px;
+    padding : 20px;
+    border: none;
+    font-family: NanumSquareRound;
+    color: black;
+
+    /* 내 원래 위치를 기준으로 이동  relative*/
+    /* 포지션 속성의 특징은 좌표 이동이 가능하며
+       공중에 떠 있다
+    */
+
+    position : absolute; 
+    /* 부모 중 relative를 가진 부모를 기준으로 이동 absolute */
+    left: 0px;
+    right: 0px;
+    top : 250px;
+    margin: auto;
+    width: 130px;
+
+}
+
+.buyBtn:hover{
+    background-color: white;
+    font-size: 22px;
+}
+
+.buyBtn:active{
+    background-color: gray;
+}
+
+.mainContentBox{
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    background-color: #ced4da;
+    position:relative;
+    top : -100px;
+    padding: 1px;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.mainContentBox *{
+    width: 80%;
+    margin-top : 30px;
+    text-align : center;
+    font-family: NanumSquareRound;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formBackground{
+    background-color: black;
+    padding: 30px;
+}
+
+.formWhite{
+    width: 80%;
+    background-color: white;
+    margin:auto;
+    max-width: 600px;
+    padding:30px;
+}
+
+.form-input{
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.w-100{
+    width: 100%;
+    padding: 10px;
+}
+
+.w-50{
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.nav-container{
+    display: flex;
+    background-color: palevioletred;
+    height: 100px;
+    align-items: center;
+    padding: 20px;
+}
+
+.nav-content{
+    margin-right: 20px;
+    font-size: 35px;
+    color:white;
+    text-align: center;
+}
+
+.products-container{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.products-container div{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.products-container i {
+    background-color: burlywood;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    padding-top: 25px;
+    box-sizing: border-box;
+    color: white;
+    clear: both;
+}
+
+.products-container::after{
+    content: ' ';
+    display: block;
+    clear: both;
+    float: none;
+}
+
+.side-bar{
+    background-color: black;
+    width: 600px;
+    height: 1000px;
+    position: absolute;
+    top:600px;
+    left: -400px;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    padding-right: 70px;
+}
+
+.side-bar:hover{
+    animation-name: move;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    
+}
+
+.side-bar h4{
+    text-align: right;
+}
+
+.side-bar:hover h4{
+    animation-name: text-move;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.side-bar p{
+    text-align: center;
+}
+
+.side-bar:hover p{
+    animation-name: text-move2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes move {
+    0%{
+        left:-400px;
+    }
+    100%{
+        left:0px;
+    }
+}
+
+@keyframes text-move {
+    0%{
+        text-align: right;
+    }
+    100%{
+        text-align: center;
+    }
+}
+
+@keyframes text-move2 {
+    0%{
+        text-align: center;
+        transform: skew(0);
+    }
+    40%{
+        transform: translate(150px) skew(-20deg);
+    }
+
+    100%{
+        transform: translate(0px) skew(-0deg);
+    }
+}
+
+
+.shop-bg{
+    background-color: #eee;
+}
+
+.shop-container{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.shop-item{
+    width: 33%;
+    padding: 10px;
+}
+
+.shop-item img{
+    width: 100%;
+}
+
+.overlay-wrap{
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.0);
+    font-size: 20px;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    height: 50%;
+    transition: all 0.7s;
+    margin-top : 100%;
+    box-sizing: border-box;
+}
+
+.overlay-wrap:hover .overlay{
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-top : 50%;
+    opacity: 1;
+}
+
+/* one-way animation tip 
+    1. 시작 스타일 만들기 ex opacity 0
+    2. 최종 스타일 만들기 ex opacity 0.5, 글자 등장
+    3. 언제 최종 스타일로 바뀌는지 ex 마우스 올렸을 때
+    4. transition으로 애니메이션
+*/
+
+
+@media screen and (max-width:1200px){
+    .mainTitle{
+        font-size: 30px;
+    }
+    .nav-content{
+        font-size: 16px;
+    }
+
+    .products-container div{
+        float: left;
+        width: 50%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:768px){
+    .mainTitle{
+        font-size: 20px;
+    }
+    .nav-content{
+        font-size: 10px;
+    }
+    .products-container div{
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+}

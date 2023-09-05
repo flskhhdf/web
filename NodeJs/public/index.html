@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <nav class="nav-bar">
+                <div class = "nav-title">오늘 뭐 하지?</div>
+                <div class = "nav-menu">Home</div>
+                <div class = "nav-menu">Write</div>
+                <div class = "nav-menu">임시</div>
+            </nav>
+
+            <div class = "main-content">
+                <form class = "main-form" action="/add" method="POST"> 
+                    <!-- 서버에게 관습적으로 데이터를 추가할때 post를 쓴다 -->
+                    <div class = "form-title">기록해도 안할거잖아</div>
+                    <div>
+                        <p class = "sub-title">오늘의 할 일</p>
+                        <input type="text" placeholder="오늘의 할 일" name="title">
+                        <!-- post 요청으로 서버에게 데이터 전송하고 싶으면 input들에 name을 써야한다 -->
+                    </div>
+                    <div>
+                        <p class = "sub-title">세부 내용 적으셈</p>
+                        <textarea placeholder="세부내용" name="detail"></textarea>
+                    </div>
+                    <button type="submit">저장하기</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
