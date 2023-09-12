@@ -42,9 +42,23 @@ function App() {
 				<p>Lorem</p>	
 			</div>
 
+			<Modal/>
+
 			{/* 2. 변수 넣을 때는 {중괄호} */}
 			{/* style은 {{오브젝트 형식}}  */}
 		</div>
 	);
 }
+
+// 모달 컴포넌트
+function Modal(){
+	return (
+		<div className='modal'>
+			<h4>제목</h4>
+			<p>날짜</p>
+			<p>상세내용</p>
+		</div>
+	)
+}
+
 export default App;
