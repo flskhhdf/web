@@ -6,9 +6,10 @@ function App() {
 	// let post = 'Input Header';
 	// a는 데이터, b는 state 변경 도와주는 함수
 	let [title,titlef] = useState(['stateTitle1','stateTitle2','stateTitle3']);
-	let [likeCnt, cntPlus] = useState(0);
+	let [likeCnt, cntPlus] = useState([0, 0, 0]);
+	let [modal, setModal] = useState(false);
 	// state를 써야하는 이유
-	// 일반 변수는 갑자기 변경되면 html에 자동으로 반영이 되지 않지만 state는 ㅕㄴ경되면 html이 자동 재랜더링된다
+	// 일반 변수는 갑자기 변경되면 html에 자동으로 반영이 되지 않지만 state는 변경되면 html이 자동 재랜더링된다
 	// 자주 변경되는 것을 state를 사용하는게 좋다. 
 	
 	function click(){
@@ -26,7 +27,7 @@ function App() {
 				copy[0] = 'changeTitle';
 				titlef(copy);
 			}}>changeTitle</button>
-			<div className='list'>
+			{/* <div className='list'>
 				<h4>
 					{title[0]} <span onClick={click}> 👍 </span> {likeCnt} 
 				</h4>
@@ -37,12 +38,40 @@ function App() {
 				<h4>{ title[1] }</h4>
 				<p>Lorem</p>	
 			</div>
+
 			<div className='list'>
 				<h4>{ title[2] }</h4>
 				<p>Lorem</p>	
-			</div>
+			</div> */}
+			
+			{
+				title.map(function(a, i){
+					return (
+						<div className='list'>
+						<h4>{ title[i] } <span onClick={()=>{
+							let copy = [...likeCnt];
+							copy[i]+=1;
+							cntPlus(copy);
+						}}> 👍 </span> {likeCnt[i]} </h4>
+						<p>Lorem</p>	
+						</div>
+					)
+				})
+			}
+			{/* 반복적인 html 생성은 map으로 */}
 
-			<Modal/>
+			<button onClick={ () => {
+				setModal(!modal)
+			}}>modal open</button>
+			{
+				modal == true ? <Modal></Modal> : null
+			}
+
+			{/* 동적 UI만드는 방법
+				1. html, css로 미리 디자인 완성
+				2. UI의 현자 상태를 state로 저장
+				3. state에 따라 UI가 어떻게 보일지 작성
+			*/}
 
 			{/* 2. 변수 넣을 때는 {중괄호} */}
 			{/* style은 {{오브젝트 형식}}  */}
