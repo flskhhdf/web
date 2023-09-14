@@ -5,10 +5,10 @@ function App() {
 	// 자료 잠깐 저장할 변수는 var let const state
 	// let post = 'Input Header';
 	// a는 데이터, b는 state 변경 도와주는 함수
-	let [title,titlef] = useState(['stateTitle1','stateTitle2','stateTitle3']);
+	let [title,titlef] = useState(['astateTitle1','cstateTitle2','bstateTitle3']);
 	let [likeCnt, cntPlus] = useState(0);
 	// state를 써야하는 이유
-	// 일반 변수는 갑자기 변경되면 html에 자동으로 반영이 되지 않지만 state는 ㅕㄴ경되면 html이 자동 재랜더링된다
+	// 일반 변수는 갑자기 변경되면 html에 자동으로 반영이 되지 않지만 state는 변경되면 html이 자동 재랜더링된다
 	// 자주 변경되는 것을 state를 사용하는게 좋다. 
 	
 	function click(){
@@ -26,6 +26,11 @@ function App() {
 				copy[0] = 'changeTitle';
 				titlef(copy);
 			}}>changeTitle</button>
+			<button onClick={()=>{
+				let sortT = [...title];
+				sortT.sort();
+				titlef(sortT);
+			}}>Sort Title</button>
 			<div className='list'>
 				<h4>
 					{title[0]} <span onClick={click}> 👍 </span> {likeCnt} 
