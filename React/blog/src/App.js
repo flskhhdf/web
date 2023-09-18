@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './App.css'; // css 파일 경로
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
 	let [title, titlef] = useState(['stateTitle1','stateTitle2','stateTitle3']);
 	let [likeCnt, cntPlus] = useState([0, 0, 0]);
 	let [modal, setModal] = useState(false);
+	let [input, changeInput] = useState('');
 	// state를 써야하는 이유
 	// 일반 변수는 갑자기 변경되면 html에 자동으로 반영이 되지 않지만 state는 변경되면 html이 자동 재랜더링된다
 	// 자주 변경되는 것을 state를 사용하는게 좋다. 
@@ -54,10 +55,21 @@ function App() {
 			}
 			{/* 반복적인 html 생성은 map으로 */}
 
+			<input onChange={function(e){
+				changeInput(e.target.value);
+			}}></input>
+			<button onClick={()=>{
+				let copy = [...title];
+				copy.push(input);
+				titlef(copy);
+				let copyCnt = [...likeCnt];
+				copyCnt.push(0);
+				cntPlus(copyCnt);
+			}}>글 추가</button>
 			{
 				modal == true ? <Modal titleChange = {title} title = {subTitle}/> : null
 			}
-
+			<Modal2></Modal2>
 			{/* 동적 UI만드는 방법
 				1. html, css로 미리 디자인 완성
 				2. UI의 현재 상태를 state로 저장
@@ -83,6 +95,27 @@ function Modal(props){
 			}}>글 수정</button>
 		</div>
 	)
+}
+
+class Modal2 extends React.Component{
+	constructor(props){
+		super(props);
+		this.state = {
+			name : 'kim',
+			age : 20
+		}
+	}
+	render(){
+		return(
+			<div>안녕 { this.state.age }
+				{/* this.props */}
+				<button onClick={()=>{
+					this.setState({age : 21})
+				}}>버튼</button>
+			</div>
+		)
+		
+	}
 }
 
 export default App;
