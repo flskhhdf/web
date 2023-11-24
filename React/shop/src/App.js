@@ -18,7 +18,7 @@ function App() {
 
 			<Navbar bg="dark" data-bs-theme="dark">
 				<Container>
-					<Navbar.Brand href="#home">DDU2 shop</Navbar.Brand>
+					<Navbar.Brand onClick={()=> {navigate('/')}}>DDU2 shop</Navbar.Brand>
 					<Nav className="me-auto">
 						<Nav.Link onClick={()=>{navigate('/')}} >Home</Nav.Link>
 						<Nav.Link onClick={()=>{navigate('/detail')}}>Detail</Nav.Link>
